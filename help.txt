@@ -1,8 +1,9 @@
-╭───「Menu」
-├ {key}Self
-├ {key}Group
-├ {key}Media
-├ {key}Settings
+╭───「คำสั่ง」
+├ {key}คำสั่ง1
+├ {key}คำสั่ง2
+├ {key}คำสั่ง3
+├ {key}คำสั่ง4
 ├──────────
-│Type : HelloWorld
+│Type : Self bot
+│BY : SELFBOT-BY:MAX
 ╰──────────
