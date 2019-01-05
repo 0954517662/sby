@@ -29,7 +29,7 @@ args = parser.parse_args()
 # Login Client
 listAppType = ['DESKTOPWIN', 'DESKTOPMAC', 'IOSIPAD', 'CHROMEOS']
 try:
-    print ('##----- LOGIN CLIENT -----##')
+    print ('##----- LOGIN SELFBOT-BY:MAX -----##')
     line = None
     if args.apptype:
         tokenPath = Path('authToken.txt')
@@ -87,9 +87,9 @@ except Exception as error:
 if line:
     print ('++ Auth Token : %s' % line.authToken)
     print ('++ Timeline Token : %s' % line.tl.channelAccessToken)
-    print ('##----- LOGIN CLIENT (Success) -----##')
+    print ('##----- LOGIN SELFBOT-BY:MAX (Success) -----##')
 else:
-    sys.exit('##----- LOGIN CLIENT (Failed) -----##')
+    sys.exit('##----- LOGIN SELFBOT-BY:MAX (Failed) -----##')
 
 myMid = line.profile.mid
 programStart = time.time()
@@ -226,14 +226,14 @@ def helpmsg2():
     else:
         key = ''
     helpMsg2 =   "╭───「 Token 」" + "\n" + \
-                    "├" + key + "Win10" + "\n" + \
-                    "├" + key + "Iospad" + "\n" + \
-                    "├" + key + "Chromeos" + "\n" + \
-                    "├" + key + "Desktopwin" + "\n" + \
-                    "├" + key + "Desktopmac" + "\n" + \
+                    "├ 🤖" + key + "Win10" + "\n" + \
+                    "├ 🤖" + key + "Iospad" + "\n" + \
+                    "├ 🤖" + key + "Chromeos" + "\n" + \
+                    "├ 🤖" + key + "Desktopwin" + "\n" + \
+                    "├ 🤖" + key + "Desktopmac" + "\n" + \
                     "├────────────" + "\n" + \
-                    "├" + key + "Ex : Token win10" + "\n" + \
-                    "├" + key + "Jika Sudah Ketik Done" + "\n" + \
+                    "├ 🕵" + key + "Ex : Token win10" + "\n" + \
+                    "├ 🕵" + key + "Jika Sudah Ketik Done" + "\n" + \
                     "╰────────────"
     return helpMsg2
     
@@ -242,16 +242,16 @@ def helpmsg3():
         key = settings['keyCommand']
     else:
         key = ''
-    helpMsg3 =   "╭───「 giie」" + "\n" + \
-                    "├" + key + "Me" + "\n" + \
-                    "├" + key + "Profile" + "\n" + \
-                    "├" + key + "Blocklist" + "\n" + \
-                    "├" + key + "Mimic" + "\n" + \
-                    "├" + key + "Myprofile" + "\n" + \
-                    "├" + key + "Creator" + "\n" + \
+    helpMsg3 =   "╭───「 Giie」" + "\n" + \
+                    "├ 🤖" + key + "Me" + "\n" + \
+                    "├ 🤖" + key + "Profile" + "\n" + \
+                    "├ 🤖" + key + "Blocklist" + "\n" + \
+                    "├ 🤖" + key + "Mimic" + "\n" + \
+                    "├ 🤖" + key + "Myprofile" + "\n" + \
+                    "├ 🤖" + key + "Creator" + "\n" + \
                     "├────────────" + "\n" + \
-                    "├" + key + "Friendlist" + "\n" + \
-                    "├" + key + "Broadcast" + "\n" + \
+                    "├ 🕵" + key + "Friendlist" + "\n" + \
+                    "├ 🕵" + key + "Broadcast" + "\n" + \
                     "╰────────────"
     return helpMsg3
     
@@ -261,23 +261,23 @@ def helpmsg4():
     else:
         key = ''
     helpMsg4 =   "╭───「 Group 」" + "\n" + \
-                    "├" + key + "Groupinfo" + "\n" + \
-                    "├" + key + "Grouplist" + "\n" + \
-                    "├" + key + "Memberlist" + "\n" + \
-                    "├" + key + "Openqr" + "\n" + \
-                    "├" + key + "Closeqr" + "\n" + \
-                    "├" + key + "ChangeGroupName <name>" + "\n" + \
-                    "├" + key + "ChangeGroupPict" + "\n" + \
-                    "├" + key + "Kickall" + "\n" + \
-                    "├" + key + "Cancelall" + "\n" + \
-                    "├" + key + "Tagall" + "\n" + \
-                    "├" + key + "Lurk" + "\n" + \
-                    "├" + key + "kick <Mention>" + "\n" + \
-                    "├" + key + "Vkick <Mention>" + "\n" + \
-                    "├" + key + "Greet" + "\n" + \
+                    "├ 🤖" + key + "Groupinfo" + "\n" + \
+                    "├ 🤖" + key + "Grouplist" + "\n" + \
+                    "├ 🤖" + key + "Memberlist" + "\n" + \
+                    "├ 🤖" + key + "Openqr" + "\n" + \
+                    "├ 🤖" + key + "Closeqr" + "\n" + \
+                    "├ 🤖" + key + "ChangeGroupName <name>" + "\n" + \
+                    "├ 🤖" + key + "ChangeGroupPict" + "\n" + \
+                    "├ 🤖" + key + "Kickall" + "\n" + \
+                    "├ 🤖" + key + "Cancelall" + "\n" + \
+                    "├ 🤖" + key + "Tagall" + "\n" + \
+                    "├ 🤖" + key + "Lurk" + "\n" + \
+                    "├ 🤖" + key + "kick <Mention>" + "\n" + \
+                    "├ 🤖" + key + "Vkick <Mention>" + "\n" + \
+                    "├ 🤖" + key + "Greet" + "\n" + \
                     "├────「 Remote 」" + "\n" + \
-                    "├" + key + "Open <NumberGroup>" + "\n" + \
-                    "├" + key + "Close <NumberGroup>" + "\n" + \
+                    "├ 🕵" + key + "Open <NumberGroup>" + "\n" + \
+                    "├ 🕵" + key + "Close <NumberGroup>" + "\n" + \
                     "╰────────────"
     return helpMsg4
     
@@ -287,14 +287,14 @@ def helpmsg5():
     else:
         key = ''
     helpMsg5 =   "╭───「 Settings 」" + "\n" + \
-                    "├" + key + "SetKey" + "\n" + \
-                    "├" + key + "AutoAdd" + "\n" + \
-                    "├" + key + "AutoRespond" + "\n" + \
-                    "├" + key + "AutoRespondMention" + "\n" + \
-                    "├" + key + "AutoRead <On/Off>" + "\n" + \
-                    "├" + key + "CheckContact <On/Off>" + "\n" + \
-                    "├" + key + "CheckPost <On/Off>" + "\n" + \
-                    "├" + key + "CheckSticker <On/Off>" + "\n" + \
+                    "├ 🤖" + key + "SetKey" + "\n" + \
+                    "├ 🤖" + key + "AutoAdd" + "\n" + \
+                    "├ 🤖" + key + "AutoRespond" + "\n" + \
+                    "├ 🤖" + key + "AutoRespondMention" + "\n" + \
+                    "├ 🤖" + key + "AutoRead On/Off" + "\n" + \
+                    "├ 🤖" + key + "CheckContact On/Off" + "\n" + \
+                    "├ 🤖" + key + "CheckPost On/Off" + "\n" + \
+                    "├ 🤖" + key + "CheckSticker On/Off" + "\n" + \
                     "╰────────────"
     return helpMsg5
     
@@ -304,11 +304,11 @@ def helpmsg6():
     else:
         key = ''
     helpMsg6 =   "╭───「 Media 」" + "\n" + \
-                    "├" + key + "Musik「Text」" + "\n" + \
-                    "├" + key + "Image「Text」" + "\n" + \
-                    "├" + key + "Gambar「Text」" + "\n" + \
-                    "├" + key + "Playvidio「Text」" + "\n" + \
-                    "├" + key + "Listoken" + "\n" + \
+                    "├ 🤖" + key + "Musik「Text」" + "\n" + \
+                    "├ 🤖" + key + "Image「Text」" + "\n" + \
+                    "├ 🤖" + key + "Gambar「Text」" + "\n" + \
+                    "├ 🤖" + key + "Playvidio「Text」" + "\n" + \
+                    "├ 🤖" + key + "Listoken" + "\n" + \
                     "╰────────────"
     return helpMsg6
 
@@ -442,27 +442,27 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         line.sendReplyMessage(msg_id, to, 'Author is linepy')
     elif cmd == 'about':
         res = '╭───「 About 」'
-        res += '\n├ Type : Self Bot'
-        res += '\n├ Version : 3.0.8'
-        res += '\n├ Library : linepy'
-        res += '\n├ Special Thanks To'
-        res += '\n├ Team Hello World'
+        res += '\n├ 😈 Type : Self Bot'
+        res += '\n├ 😈 Version : 3.0.8'
+        res += '\n├ 😈 Library : linepy'
+        res += '\n├ 😈 Special Thanks To'
+        res += '\n├ 😈 Team SELFBOT-BY:MAX'
         res += '\n╰──────────'
         line.sendReplyMessage(msg_id, to, res)
     elif cmd == 'status':
         res = '╭───「 Status 」'
-        res += '\n├ Auto Add : ' + bool_dict[settings['autoAdd']['status']][1]
-        res += '\n├ Auto Join : ' + bool_dict[settings['autoJoin']['status']][1]
-        res += '\n├ Auto Respond : ' + bool_dict[settings['autoRespond']['status']][1]
-        res += '\n├ Auto Respond Mention : ' + bool_dict[settings['autoRespondMention']['status']][1]
-        res += '\n├ Auto Read : ' + bool_dict[settings['autoRead']][1]
-        res += '\n├ Setting Key : ' + bool_dict[settings['setKey']['status']][1]
-        res += '\n├ Mimic : ' + bool_dict[settings['mimic']['status']][1]
-        res += '\n├ Greetings Join : ' + bool_dict[settings['greet']['join']['status']][1]
-        res += '\n├ Greetings Leave : ' + bool_dict[settings['greet']['leave']['status']][1]
-        res += '\n├ Check Contact : ' + bool_dict[settings['checkContact']][1]
-        res += '\n├ Check Post : ' + bool_dict[settings['checkPost']][1]
-        res += '\n├ Check Sticker : ' + bool_dict[settings['checkSticker']][1]
+        res += '\n├ 🇹🇭 Auto Add : ' + bool_dict[settings['autoAdd']['status']][1]
+        res += '\n├ 🇹🇭 Auto Join : ' + bool_dict[settings['autoJoin']['status']][1]
+        res += '\n├ 🇹🇭 Auto Respond : ' + bool_dict[settings['autoRespond']['status']][1]
+        res += '\n├ 🇹🇭 Auto Respond Mention : ' + bool_dict[settings['autoRespondMention']['status']][1]
+        res += '\n├ 🇹🇭 Auto Read : ' + bool_dict[settings['autoRead']][1]
+        res += '\n├ 🇹🇭 Setting Key : ' + bool_dict[settings['setKey']['status']][1]
+        res += '\n├ 🇹🇭 Mimic : ' + bool_dict[settings['mimic']['status']][1]
+        res += '\n├ 🇹🇭 Greetings Join : ' + bool_dict[settings['greet']['join']['status']][1]
+        res += '\n├ 🇹🇭 Greetings Leave : ' + bool_dict[settings['greet']['leave']['status']][1]
+        res += '\n├ 🇹🇭 Check Contact : ' + bool_dict[settings['checkContact']][1]
+        res += '\n├ 🇹🇭 Check Post : ' + bool_dict[settings['checkPost']][1]
+        res += '\n├ 🇹🇭 Check Sticker : ' + bool_dict[settings['checkSticker']][1]
         res += '\n╰───「 Self Bot 」'
         line.sendReplyMessage(msg_id, to, parsingRes(res))
     elif cmd == 'abort':
