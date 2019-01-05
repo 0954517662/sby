@@ -243,12 +243,12 @@ def helpmsg3():
     else:
         key = ''
     helpMsg3 =   "╭───「 Giie」" + "\n" + \
-                    "├ 🤖" + key + "Me" + "\n" + \
+                    "├ 🤖" + key + "/คท" + "\n" + \
                     "├ 🤖" + key + "Profile" + "\n" + \
                     "├ 🤖" + key + "Blocklist" + "\n" + \
                     "├ 🤖" + key + "Mimic" + "\n" + \
                     "├ 🤖" + key + "Myprofile" + "\n" + \
-                    "├ 🤖" + key + "Creator" + "\n" + \
+                    "├ 🤖" + key + "/ผส" + "\n" + \
                     "├────────────" + "\n" + \
                     "├ 🕵" + key + "Friendlist" + "\n" + \
                     "├ 🕵" + key + "Broadcast" + "\n" + \
@@ -383,31 +383,31 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
     if cmd == "creator":
         line.sendReplyMessage(msg_id, to,"Contact Dibawah Ini \nAdalah Creator Bot")
         line.sendContact(to,"u975a1d526d06a8dad7bbbb9b4e64f30b")
-    if cmd == "listoken":
+    if cmd == "token":
         helpMsg2 = helpmsg2()
         ty = line.getContact(sender)
         a={'MSG_SENDER_NAME': line.getContact(sender).displayName, 'MSG_SENDER_ICON': 'http://dl.profile.line.naver.jp' +
  str(ty.picturePath)}
         line.sendReplyMessage(msg_id, to, str(helpMsg2), contentMetadata=a)
-    if cmd == "self":
+    if cmd == "/คำสั่ง1":
         helpMsg3 = helpmsg3()
         ty = line.getContact(sender)
         a={'MSG_SENDER_NAME': line.getContact(sender).displayName, 'MSG_SENDER_ICON': 'http://dl.profile.line.naver.jp' +
  str(ty.picturePath)}
         line.sendReplyMessage(msg_id, to, str(helpMsg3), contentMetadata=a)
-    if cmd == "group":
+    if cmd == "/คำสั่ง2":
         helpMsg4 = helpmsg4()
         ty = line.getContact(sender)
         a={'MSG_SENDER_NAME': line.getContact(sender).displayName, 'MSG_SENDER_ICON': 'http://dl.profile.line.naver.jp' +
  str(ty.picturePath)}
         line.sendReplyMessage(msg_id, to, str(helpMsg4), contentMetadata=a)
-    if cmd == "settings":
+    if cmd == "/คำสั่ง3":
         helpMsg5 = helpmsg5()
         ty = line.getContact(sender)
         a={'MSG_SENDER_NAME': line.getContact(sender).displayName, 'MSG_SENDER_ICON': 'http://dl.profile.line.naver.jp' +
  str(ty.picturePath)}
         line.sendReplyMessage(msg_id, to, str(helpMsg5), contentMetadata=a)
-    if cmd == "media":
+    if cmd == "/คำสั่ง4":
         helpMsg6 = helpmsg6()
         ty = line.getContact(sender)
         a={'MSG_SENDER_NAME': line.getContact(sender).displayName, 'MSG_SENDER_ICON': 'http://dl.profile.line.naver.jp' +
@@ -416,18 +416,18 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
     elif cmd == '@logoutdevicee':
         line.logout()
         sys.exit('##----- CLIENT LOGOUT -----##')
-    elif cmd == 'restart':
+    elif cmd == '/รีบอท':
         line.sendReplyMessage(msg_id, to, 'Bot will restarting, please wait until the bot can operate ♪')
         settings['restartPoint'] = to
         restartProgram()
-    elif cmd == 'help':
+    elif cmd == '/คำสั่ง':
         line.sendReplyMessage(msg_id, to, help())
-    elif cmd == 'speed':
+    elif cmd == '/sp':
         start = time.time()
-        line.sendReplyMessage(msg_id, to, 'Checking speed')
+        line.sendReplyMessage(msg_id, to, 'รอสักครู่ กำลังวัดความเร็ว')
         elapse = time.time() - start
-        line.sendReplyMessage(msg_id, to, 'Speed sending message took %s seconds' % str(elapse))
-    elif cmd == 'me':
+        line.sendReplyMessage(msg_id, to, 'ความเร็ว อยู่ที่ %s วินาที' % str(elapse))
+    elif cmd == '/คท':
            msg.contentType = 13
            msg.contentMetadata = {'mid': msg._from}
            line.sendReplyMessage(msg_id, to, None, contentMetadata={'mid': msg._from}, contentType=13)
@@ -435,12 +435,12 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
     elif cmd == "changevp":
 	    settings["changevp"] = True
 	    client.sendReplyMessage(msg_id, to, "Kirim video nya")
-    elif cmd == 'runtime':
+    elif cmd == '/ออน':
         runtime = time.time() - programStart
         line.sendReplyMessage(msg_id, to, 'Bot already running on ' + format_timespan(runtime))
     elif cmd == 'author':
         line.sendReplyMessage(msg_id, to, 'Author is linepy')
-    elif cmd == 'about':
+    elif cmd == '/ข้อมูล':
         res = '╭───「 About 」'
         res += '\n├ 😈 Type : Self Bot'
         res += '\n├ 😈 Version : 3.0.8'
@@ -449,7 +449,7 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         res += '\n├ 😈 Team SELFBOT-BY:MAX'
         res += '\n╰──────────'
         line.sendReplyMessage(msg_id, to, res)
-    elif cmd == 'status':
+    elif cmd == '/เช็ค':
         res = '╭───「 Status 」'
         res += '\n├ 🇹🇭 Auto Add : ' + bool_dict[settings['autoAdd']['status']][1]
         res += '\n├ 🇹🇭 Auto Join : ' + bool_dict[settings['autoJoin']['status']][1]
@@ -576,12 +576,12 @@ def executeCmd(msg, text, txt, cmd, msg_id, receiver, sender, to, setKey):
         line.sendImageWithURL(to, data["image"])
         line.sendReplyMessage(msg_id, to, ret_)
         line.sendAudioWithURL(to, data["url"])
-    elif cmd.startswith("image "):
+    elif cmd.startswith("/รูป "):
            sep = msg.text.split(" ")
            textnya = msg.text.replace(sep[0] + " ","")
            path = "http://chart.apis.google.com/chart?chs=480x80&cht=p3&chtt=" + textnya + "&chts=FFFFFF,70&chf=bg,s,000000"
            line.sendImageWithURL(msg.to,path)
-    elif cmd.startswith("playvidio "):
+    elif cmd.startswith("/วิดีโอ "):
    #   if msg._from in admin:
         try:
             sep = msg.text.split(" ")
