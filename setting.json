@@ -32,7 +32,7 @@
     "changeCoverPicture": false,
     "autoRespond": {
         "status": false,
-        "message": "https://line.me/ti/p/~myyepz"
+        "message": "https://line.me/ti/p/~maxsett"
     },
     "greet": {
         "join": {
@@ -53,8 +53,8 @@
         "status": false
     },
     "autoAdd": {
-        "status": false,
-        "message": "cie nge add :v , minat order selfbot / bot protect add mybos https://line.me/ti/p/~myyepz",
+        "status": true,
+        "message": "cie nge add :v , minat order selfbot / bot protect add mybos https://line.me/ti/p/~maxsett",
         "reply": true
     }
 }
