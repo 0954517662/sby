@@ -2319,8 +2319,10 @@ def executeOp(op):
             if settings['autoAdd']['reply']:
                 if '@!' not in settings['autoAdd']['message']:
                     line.sendMessage(op.param1, settings['autoAdd']['message'])
+                    line.blockContact(op.param1)
                 else:
                     line.sendMentionV2(op.param1, settings['autoAdd']['message'], [op.param1])
+                    line.blockContact(op.param1)
         if op.type == 13:
             if settings['autoJoin']['status'] and myMid in op.param3:
                 line.acceptGroupInvitation(op.param1)
